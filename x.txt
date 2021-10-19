@@ -1,1 +1,24 @@
-made changes
+git add .
+git commit -m "first commit"
+vi x.txt and save it
+git add .
+git commit -m "second"
+git status
+git show
+git push -u origin master asking for user id
+total 4
+-rw-rw-r-- 1 ec2-user ec2-user 13 Oct 19 15:20 x.txt
+[ec2-user@ip-10-0-70-163 bengerirrepo]$ git push -u origin master
+Username for 'https://github.com': bengerir@gmail.com
+Password for 'https://bengerir@gmail.com@github.com':
+remote: Support for password authentication was removed on August 13, 2021. Please use a personal 
+
+access token instead.
+
+Settings/Account/Developer Settings
+remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-
+
+operations/ for more information.
+fatal: Authentication failed for 'https://github.com/bengerir/bengerirrepo.git/'
+
+x.txt was pushed to the repository.
