@@ -2,7 +2,7 @@
 	"name": "SQL script 3",
 	"properties": {
 		"content": {
-			"query": "CREATE DATABASE DataExplorationDB \n                COLLATE Latin1_General_100_BIN2_UTF8\n\n                USE DataExplorationDB\n\n                CREATE EXTERNAL DATA SOURCE ContosoLake\nWITH ( LOCATION = 'https://contosolake.dfs.core.windows.net')",
+			"query": "CREATE DATABASE DataExplorationDB \n                COLLATE Latin1_General_100_BIN2_UTF8\n\n                USE DataExplorationDB\n\nCREATE EXTERNAL DATA SOURCE ragContosoLake\nWITH ( LOCATION = 'https://ragcontosolake.dfs.core.windows.net')\n\n    CREATE LOGIN data_explorer WITH PASSWORD = 'Govinda123#';\nCREATE USER data_explorer FOR LOGIN data_explorer;\nGO\nGRANT ADMINISTER DATABASE BULK OPERATIONS TO data_explorer;\nGO\n\nSELECT\n   TOP 100 *\nFROM\n    OPENROWSET(\n            BULK '/users/yellow_tripdata_2022-01.parquet',\n            DATA_SOURCE = 'ragContosoLake',\n            FORMAT='PARQUET'\n    ) AS [result]",
 			"metadata": {
 				"language": "sql"
 			},
