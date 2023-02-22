@@ -2,7 +2,7 @@
 	"name": "SQL script 1",
 	"properties": {
 		"content": {
-			"query": "select * FROM TAB",
+			"query": "CREATE TABLE \nTESTS (NAME VARCHAR[5])",
 			"metadata": {
 				"language": "sql"
 			},
